@@ -2,102 +2,97 @@
 <html>
 
 <head>
-  <title>DABdiss LWL</title>
+  <title>NOHvAL Experiment</title>
   <meta charset="utf-8"/>
   <script src="jspsych-6.1.0/jspsych.js"> </script>
-  <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
-  <script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
+  <script src="jspsych-6.1.0/plugins/jspsych-audio-keyboard-response.js"></script>
+  <script src="jspsych-6.1.0/plugins/jspsych-call-function.js"></script>
   <script src="jspsych-6.1.0/plugins/jspsych-fullscreen.js"></script>
-  <!-- <script src="jspsych-6.1.0/papaparse.min.js"></script>  -->
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.2/papaparse.min.js"></script> -->
   <script src="jspsych-6.1.0/plugins/jspsych-audio-button-response-flexiblelocations.js"></script>
-  <!--<script src="jspsych-6.1.0/google-spreadsheet.js"></script> -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.2.0/papaparse.min.js"></script>
   <link rel="stylesheet" href="jspsych-6.1.0/css/jspsych.css",type="text/css"> </link>
   <link href="css/jspsych.css" rel="stylesheet" type="text/css"></link>
   <style>
   div.absolute {
     position: absolute;
     left: 10px;
-    right:0px;
-    top:10px;
+    right: 0px;
+    top: 10px;
     border: 3px solid #73AD21;
-    /* background-image: url("stimuli/images/face-closed.jpg"); */
   }
   </style>
 </head>
 <body>
-  <div id="jspsych-lwl"></div>
+  <div id="nohval-lwl"></div>
 </body>
 
 <script>
 
 
-// $('body,html').addClass('stop-scrolling');
-//$('body').bind('touchmove', function(e){e.preventDefault()})
 
+/* Enter subject id */
+//var subject_id = prompt("Subject ID", "test")
+var subject_id = jsPsych.data.getURLVariable('sub')
+//var trial_order = prompt("Order (1 or 2)","1");
+var trial_order = jsPsych.data.getURLVariable('order')
 
-//Enter subject id
-var subject_id = prompt("Enter subject number", "test");
-var trial_order = prompt("Order (1-2)","1");
-// var input = prompt("Enter input type (touch or click)","touch");
+// read from a public spreadsheet for  trials
+// use the publish link NOT the sharing link
 
-// jsPsych.data.addProperties({
-// 	subject: subject_id,
-// 	order: trial_order
-// });
-
-// choose csv file
-if (trial_order == "1") {
-  var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrder1.csv';
-} else if (trial_order == "2") {
-  var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrder2.csv';
+if (trial_order == "S1AF") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AF.csv'
+} else if (trial_order =="S1AM") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AM.csv'
+} else if (trial_order =="S1BF") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BF.csv'
+} else if (trial_order =="S1BM") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BM.csv'
+} else if (trial_order =="S1LF") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LF.csv'
+} else if (trial_order =="S1LM") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LM.csv'
+} else if (trial_order =="S1WF") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WF.csv'
+} else if (trial_order =="S1WM") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WM.csv'
+} else if (trial_order =="S2BF") {
+ 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BF.csv'
+} else if (trial_order =="S2WF") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WF.csv'
+} else if (trial_order =="S2BM") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BM.csv'
+}  else if (trial_order =="S2WM") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WM.csv'
 }
 
+//lwl orders
+Papa.parse(publicSpreadsheetUrl,{
+  download: true,
+  header: true,
+  dynamicTyping: true,
+  complete: function(results) {
+    var data = results.data
+    console.log(data)
+    startExperiment(data); //don't start experiment until the spreadsheet is downloaded
+  }
+})
 
-Papa.parse(publicSpreadsheetUrl, {
-	          download: true,
-	          header: true,
-            dynamicTyping: true,
-	          complete: function(results) {
-	            var data = results.data
-	            console.log(data)
-              startExperiment(data);
-	          }
-	        })
-
-// function showInfo(data, tabletop) {
-//   alert('Successfully processed!')
-//   console.log(data);
-// }
-
-// window.addEventListener('DOMContentLoaded', init)
 
 document.body.style.backgroundColor = "black";
-// document.body.style.backgroundImage = "url('stimuli/images/black-background.jpg')";
 document.body.style.backgroundSize = "100%";
 document.body.style.backgroundPosition = "top";
 document.body.style.backgroundRepeat = "no-repeat";
 
-
+/* create experiment timeline*/
 var timeline = []
 
-function createTrials(data, tabletop) {
-
-  // data = data['Order_'+trial_order]['elements']
+/* extract the elements from the CSV */
+function createTrials(data) {
   console.log(data);
 
-  //stim = tabletop.sheets("stimulus_sheet").toArray()
-
-  // var welcome = {
-  //   type: "html-keyboard-response",
-  //   stimulus: "Welcome to the experiment. Press any key to begin."
-  // };
-
+/* display start screen */
   var welcome = {
     type: "fullscreen",
-    // fullscreen_mode: false,
     message: "",
     button_label: "Start",
     delay_after: 250
@@ -105,56 +100,187 @@ function createTrials(data, tabletop) {
 
   timeline.push(welcome);
 
-  // var instructions = {
-  //   type: 'audio-button-response-flexiblelocations',
-  //   stimulus: 'stimuli/sounds/Intro.wav',
-  //   margin_top: ['400px'],
-  //   margin_bottom: ['0px'],
-  //   set_background: 'face-closed',
-  //   choices: ['Go']
-  // }
-  //
-  // timeline.push(instructions);
+  var audio_test = {
+    type: "audio-keyboard-response",
+    stimulus:"stimuli/sounds/wow_cool_x4.wav",
+    choices:['space'],
+    prompt: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>"
+  }
+  timeline.push(audio_test);
 
   var expLength = data.length;
   var audioExt="stimuli/sounds/"
   var imageStart='<img src= "stimuli/images/'
-  var imageStop= '.jpg"  title = "" width="300" height="250">'
+  var imageStop='['.jpg','.png'] title = "" width="300" height="300">'
+  // var videoStart = "stimuli/videos/"
+  // var videoStop = ".mp4"
 
-
-  lwl_stimuli = []
-
+// define the experimental procedure
   for (var i = 0; i < expLength; i++) {
-    lwl_stimuli.push(
-    {stimulus: audioExt+data[i]['stimulus']+".wav",
-    choices:[imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['center_image']+imageStop, imageStart+data[i]['right_image']+imageStop],
-    set_background:data[i]['background'],
-    data:{condition:data[i]['condition'],target_side:data[i]['target_side'],correct_response:data[i]['correct_response'],background:data[i]['background']}
-    })
-  }
+    //define stimuli variables
+    var cur_trial_type = data[i]['trial_type'];
+    var cur_stimulus = audioExt+data[i]['auditory_stimulus']+".wav";
+    var cur_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['center_image']+imageStop], imageStart+data[i]['right_image']+imageStop];
+    // var cur_left_video = videoStart+data[i]['left_video']+videoStop;
+    // var cur_right_video = videoStart+data[i]['right_video']+videoStop;
+    // var cur_side = data[i]['playing_side'];
 
+    // //define html buttons
+    // var cur_left_video_button = '<div><video id="left-video" width="400" ></div>';
+    // var cur_right_video_button = '<div><video id="right-video" width="400" ></div>';
+    // var cur_left_video_button_play = '<div><video id="left-video-play" width="400" autoplay></div>';
+    // var cur_right_video_button_play = '<div><video id="right-video-play" width="400" autoplay></div>';
 
-  var lwl_trials = {
-    type: 'audio-button-response-flexiblelocations',
-    trial_duration: 4702,
-    response_ends_trial: false,
-    // pause_key: ['a'], // new
-    margin_top: ['0px','0px'],
-    margin_bottom: ['0px','0px'],
-    // margin_left: ['0px','89px'],
-    // margin_right: ['89px','0px'],
-    margin_left: ['0px','250px'],
-    margin_right: ['250px','0px'],
-    // set_background: 'face-closed',
-    // set_background:data.background,
-    timeline: lwl_stimuli,
-    data: jsPsych.timelineVariable('data'),
-    on_finish: function(data) {
-      data.correct = data.button_pressed == data.correct_response;
+    //define set up visual display
+    var cur_background = data[i]['background'];
+
+    if (cur_trial_type == "FAM"){
+      //defne Familiarization trials
+      var fam_trials = {
+        type: 'audio-button-response-flexiblelocations',
+        stimulus: cur_stimulus,
+        choices: cur_images,
+        set_background: cur_background,
+        trial_duration: 4500,
+        //tiral_duration: 120000,
+        margin_top: ['0px','0px'],
+        margin_bottom: ['0px','0px'],
+        margin_left: ['0px','250px'],
+        margin_right: ['250px','0px'],
+        response_ends_trial: false,
+        data:{
+        left_image: data[i]['left_image'],
+        center_image: data[i]['center_image'],
+        right_image: data[i]['right_image'],
+        target_label: data[i]['target_label'],
+        target_side: data[i]['target_side'],
+        trial_type: data[i]['trial_type'],
+        correct_response: data[i]['correct_response'],
+        background: data[i]['background']},
+        on_finish: function(data) {
+          data.correct = data.button_pressed == data.correct_response;
+        }
+      }
+        timeline.push(fam_trials);
     }
-  }
 
-  timeline.push(lwl_trials);
+
+    if (cur_trial_type == "FAM_LWL"){
+      //defne LWL trials
+      var lwl_trials = {
+        type: 'audio-button-response-flexiblelocations',
+        stimulus: cur_stimulus,
+        choices: cur_images,
+        set_background: cur_background,
+        trial_duration: 4500,
+        //tiral_duration: 120000,
+        margin_top: ['0px','0px'],
+        margin_bottom: ['0px','0px'],
+        margin_left: ['0px','250px'],
+        margin_right: ['250px','0px'],
+        response_ends_trial: false,
+        data:{
+    		left_image: data[i]['left_image'],
+    		right_image: data[i]['right_image'],
+    		target_label: data[i]['target_label'],
+    		target_side: data[i]['target_side'],
+        trial_type: data[i]['trial_type'],
+    		correct_response: data[i]['correct_response'],
+    		background: data[i]['background']},
+        on_finish: function(data) {
+          data.correct = data.button_pressed == data.correct_response;
+        }
+      }
+        timeline.push(lwl_trials);
+    }
+
+    if (cur_trial_type == "Teaching"){
+      //defne LWL trials
+      var lwl_trials = {
+        type: 'audio-button-response-flexiblelocations',
+        stimulus: cur_stimulus,
+        choices: cur_images,
+        set_background: cur_background,
+        trial_duration: 4500,
+        //tiral_duration: 120000,
+        margin_top: ['0px','0px'],
+        margin_bottom: ['0px','0px'],
+        margin_left: ['0px','250px'],
+        margin_right: ['250px','0px'],
+        response_ends_trial: false,
+        data:{
+        left_image: data[i]['left_image'],
+        right_image: data[i]['right_image'],
+        target_label: data[i]['target_label'],
+        target_side: data[i]['target_side'],
+        trial_type: data[i]['trial_type'],
+        correct_response: data[i]['correct_response'],
+        background: data[i]['background']},
+        on_finish: function(data) {
+          data.correct = data.button_pressed == data.correct_response;
+        }
+      }
+        timeline.push(lwl_trials);
+    }
+
+    if (cur_trial_type == "ImmTest"){
+      //defne LWL trials
+      var lwl_trials = {
+        type: 'audio-button-response-flexiblelocations',
+        stimulus: cur_stimulus,
+        choices: cur_images,
+        set_background: cur_background,
+        trial_duration: 4500,
+        //tiral_duration: 120000,
+        margin_top: ['0px','0px'],
+        margin_bottom: ['0px','0px'],
+        margin_left: ['0px','250px'],
+        margin_right: ['250px','0px'],
+        response_ends_trial: false,
+        data:{
+    		left_image: data[i]['left_image'],
+    		right_image: data[i]['right_image'],
+    		target_label: data[i]['target_label'],
+    		target_side: data[i]['target_side'],
+        trial_type: data[i]['trial_type'],
+    		correct_response: data[i]['correct_response'],
+    		background: data[i]['background']},
+        on_finish: function(data) {
+          data.correct = data.button_pressed == data.correct_response;
+        }
+      }
+        timeline.push(lwl_trials);
+    }
+
+    if (cur_trial_type == "filler"){
+      //defne LWL trials
+      var lwl_trials = {
+        type: 'audio-button-response-flexiblelocations',
+        stimulus: cur_stimulus,
+        choices: cur_images,
+        set_background: cur_background,
+        trial_duration: 4500,
+        //tiral_duration: 120000,
+        margin_top: ['0px','0px'],
+        margin_bottom: ['0px','0px'],
+        margin_left: ['0px','250px'],
+        margin_right: ['250px','0px'],
+        response_ends_trial: false,
+        data:{
+        left_image: data[i]['left_image'],
+        right_image: data[i]['right_image'],
+        target_label: data[i]['target_label'],
+        target_side: data[i]['target_side'],
+        trial_type: data[i]['trial_type'],
+        correct_response: data[i]['correct_response'],
+        background: data[i]['background']},
+        on_finish: function(data) {
+          data.correct = data.button_pressed == data.correct_response;
+        }
+      }
+        timeline.push(lwl_trials);
+    }
+
 
   var fullscreen_exit = {
     type: 'fullscreen',
@@ -166,56 +292,143 @@ function createTrials(data, tabletop) {
 
 var imageExt = 'stimuli/images/'
 
-var images = [imageExt+"1.png",
-imageExt+"1Square.jpg",
-imageExt+"2.png",
-imageExt+"2Square.jpg",
-imageExt+"3.jpg",
-imageExt+"3Square.jpg",
-imageExt+"4.jpg",
-imageExt+"4Square.jpg",
-imageExt+"alex.png",
-imageExt+"alexBlack.jpg",
-imageExt+"alexGray.jpg",
-imageExt+"appleCircle.jpg",
-imageExt+"appleSquare.jpg",
-imageExt+"ballCircle.jpg",
-imageExt+"ballSquare.jpg",
-imageExt+"balloons_left.jpg",
-imageExt+"balloons_right.jpg",
-imageExt+"beach_left.jpg",
-imageExt+"beach_right.jpg",
-imageExt+"black-background.jpg",
-imageExt+"black.jpg",
-imageExt+"blocks.jpg",
-imageExt+"fireworks_left.jpg",
-imageExt+"fireworks_right.jpg",
-imageExt+"grayCircle.jpg",
-imageExt+"ocean_left.jpg",
-imageExt+"ocean_right.jpg",
-imageExt+"shoeCircle.png",
-imageExt+"shoeSquare.jpg",
-imageExt+"sibu.jpg",
-imageExt+"sibuBlack.jpg",
-imageExt+"sibuGray.jpg",
-imageExt+"truckCircle.jpg"
-imageExt+"truckSquare.jpg",]
+
+var images = [
+"Alien.jpg",
+"AlienOutline.jpg",
+"ApplecircleBlack.jpg",
+"ApplesquareBlack.jpg",
+"AsianBoy.jpg",
+"AsianBoyOutline.jpg",
+"AsianGirl.jpg",
+"AsianGirlOutline.jpg",
+"BallcircleBlack.jpg",
+"BallsquareBlack.jpg",
+"Black.jpg",
+"black-background.jpg",
+"BlackBoy.jpg",
+"BlackBoyOutline.jpg",
+"BlackGirl.jpg",
+"BlackGirlOutline.jpg",
+"circleBlack.jpg",
+"LatinaGirl.jpg",
+"LatinaGirlOutline.jpg",
+"LatinoBoy.jpg",
+"LatinoBoyOutline.jpg",
+"LballoonsBlack.jpg",
+"LbeachBlack.jpg",
+"LfireworksBlack.jpg",
+"LoceanBlack.jpg",
+"nov1S1Circle.jpg",
+"nov1S1Square.jpg",
+"nov2S1Circle.jpg",
+"nov2S1Square.jpg",
+"nov3S1Circle.jpg",
+"nov3S1Square.jpg",
+"nov4S1Circle.jpg",
+"nov4S1Square.jpg",
+"nov5S1Circle.jpg",
+"nov5S1Square.jpg",
+"nov6S1Circle.jpg",
+"nov6S1Square.jpg",
+"nov7S1Circle.jpg",
+"nov7S1Square.jpg",
+"nov8S1Circle.jpg",
+"nov8S1Square.jpg",
+"RballoonsBlack.jpg",
+"RbeachBlack.jpg",
+"RfireworksBlack.jpg",
+"RoceanBlack.jpg",
+"ShoecircleBlack.jpg",
+"ShoesquareBlack.jpg",
+"squareBlack.jpg",
+"TruckcircleBlack.jpg",
+"TrucksquareBlack.jpg",
+"WhiteBoy.jpg",
+"WhiteBoyOutline.jpg",
+"WhiteGirl.jpg",
+"WhiteGirlOutline.jpg",]
+
+var preload_images=[];
+
+for (var k = 0; k < images.length; k++) {
+	preload_images.push(imageExt+images[k]);
+};
 
 
-function startExperiment(data, tabletop) {
-	// createTrials(data,tabletop);
-  createTrials(data);
-jsPsych.init({
+var audio = [
+"End.wav",
+"find_akar.wav",
+"find_blicket.wav",
+"find_car.wav",
+"find_cheem.wav",
+"find_doff.wav",
+"find_fisp.wav",
+"find_isot.wav",
+"find_jick.wav",
+"find_kita.wav",
+"find_leem.wav",
+"find_manu.wav",
+"find_pank.wav",
+"find_regli.wav",
+"find_shoe.wav",
+"find_smope.wav",
+"find_teebu.wav",
+"find_wiso.wav",
+"find_zorch.wav",
+"Halfway.wav",
+"Intro.wav",
+"itssee_apple.wav",
+"itssee_car.wav",
+"itsthat_apple.wav",
+"seethat_ball.wav",
+"seethat_blicket.wav",
+"seethat_cheem.wav",
+"seethat_fisp.wav",
+"seethat_jick.wav",
+"seethat_leem.wav",
+"seethat_manu.wav",
+"seethat_pank.wav",
+"seethat_regli.wav",
+"seethat_shoe.wav",
+"seethat_zorch.wav",
+"thatits_ball.wav",
+"thatits_car.wav",
+"thatits_shoe.wav",
+"thatsee_akar.wav",
+"thatsee_doff.wav",
+"thatsee_isot.wav",
+"thatsee_kita.wav",
+"thatsee_smope.wav",
+"thatsee_teebu.wav",
+"thatsee_wiso.wav",
+"where_apple.wav",
+"where_ball.wav",
+"wow_cool_x4.wav",
+];
+
+var preload_audio  = [];
+
+for (var l = 0; l < preload_audio.length; l++) {
+	preload_audio.push(audioExt+audio[l]);
+};
+
+
+function startExperiment(data) {
+	createTrials(data);
+  // generate all the plugins
+jsPsych.init({ //js.psych initializes
   timeline: timeline,
-  // preload_audio:audio,
-  preload_images:images,
-  default_iti:500,
+  preload_audio:preload_audio,
+  preload_images:preload_images,
+	default_iti: 500,
   on_finish: function() {
     //jsPsych.data.displayData();
-    // save_data('yumME','V1',subject_id, jsPsych.data.dataAsCSV());
   }
 });
 };
+
+
 
 // function save_data(experiment, version,identifier, data){
 // 	$.ajax({
