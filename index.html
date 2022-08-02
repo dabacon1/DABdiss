@@ -167,7 +167,7 @@ function createTrials(data) {
 
     if (cur_trial_type == "FAM_LWL"){
       //defne LWL trials
-      var lwl_trials = {
+      var FAM_LWL_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
@@ -191,12 +191,12 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(lwl_trials);
+        timeline.push(FAM_LWL_trials);
     }
 
     if (cur_trial_type == "Teaching"){
       //defne LWL trials
-	var fam_trials = {
+	var Teaching_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
@@ -221,12 +221,12 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(fam_trials);
+        timeline.push(Teaching_trials);
     }
 
     if (cur_trial_type == "ImmTest"){
       //defne LWL trials
-      var lwl_trials = {
+      var ImmTest_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
@@ -250,12 +250,12 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(lwl_trials);
+        timeline.push(ImmTest_trials);
     }
 
     if (cur_trial_type == "filler"){
       //defne LWL trials
-     	var fam_trials = {
+     	var filler_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
@@ -280,7 +280,7 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(fam_trials);
+        timeline.push(filler_trials);
     }
 
 
