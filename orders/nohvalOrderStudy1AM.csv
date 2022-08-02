@@ -46,6 +46,6 @@ block,trial_number,auditory_stimulus,left_image,right_image,center_image,target_
 6,44,find_isot,nov7S1Square,nov6S1Square,Black,isot,left,0,,black-background,ImmTest
 6,45,find_akar,nov5S1Square,nov7S1Square,Black,akar,right,1,,black-background,ImmTest
 6,46,find_teebu,nov6S1Square,nov8S1Square,Black,teebu,left,0,,black-background,ImmTest
-6,47,find_leam,nov8S1Square,nov5S1Square,Black,leam,left,0,,black-background,ImmTest
+6,47,find_leem,nov8S1Square,nov5S1Square,Black,leam,left,0,,black-background,ImmTest
 6,48,find_wiso,nov7S1Square,nov6S1Square,Black,wiso,right,1,,black-background,ImmTest
 6,49,End,LoceanBlack,RoceanBlack,Black,AG,left,0,,black-background,filler
