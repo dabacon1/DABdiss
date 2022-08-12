@@ -134,14 +134,44 @@ function createTrials(data) {
     //define set up visual display
     var cur_background = data[i]['background'];
 
-    if (cur_trial_type == "FAM"){
+        if (cur_trial_type == "intro"){
+      //defne Familiarization trials
+      var intro_trials = {
+        type: 'audio-button-response-flexiblelocations',
+        stimulus: cur_stimulus,
+        choices: cur_images,
+        set_background: cur_background,
+        trial_duration: 7500,
+        //tiral_duration: 120000,
+        margin_top: ['0px','0px'],
+        margin_bottom: ['0px','0px'],
+        margin_left: ['0px','0px'],
+        margin_right: ['0px','0px'],
+        response_ends_trial: false,
+        data:{
+        left_image: data[i]['left_image'],
+        center_image: data[i]['center_image'],
+        right_image: data[i]['right_image'],
+        target_label: data[i]['target_label'],
+        target_side: data[i]['target_side'],
+        trial_type: data[i]['trial_type'],
+        correct_response: data[i]['correct_response'],
+        background: data[i]['background']},
+        on_finish: function(data) {
+          data.correct = data.button_pressed == data.correct_response;
+        }
+      }
+        timeline.push(fam_trials);
+    }
+	  
+	if (cur_trial_type == "FAM"){
       //defne Familiarization trials
       var fam_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
         set_background: cur_background,
-        trial_duration: 4500,
+        trial_duration: 6000,
         //tiral_duration: 120000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
@@ -172,7 +202,7 @@ function createTrials(data) {
         stimulus: cur_stimulus,
         choices: cur_images,
         set_background: cur_background,
-        trial_duration: 4500,
+        trial_duration: 6000,
         //tiral_duration: 120000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
