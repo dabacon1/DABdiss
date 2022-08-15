@@ -121,6 +121,7 @@ function createTrials(data) {
     var cur_trial_type = data[i]['trial_type'];
     var cur_stimulus = audioExt+data[i]['auditory_stimulus']+".wav";
     var cur_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['center_image']+imageStop, imageStart+data[i]['right_image']+imageStop];
+    var cur_test_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['right_image']+imageStop];
     // var cur_left_video = videoStart+data[i]['left_video']+videoStop;
     // var cur_right_video = videoStart+data[i]['right_video']+videoStop;
     // var cur_side = data[i]['playing_side'];
@@ -173,7 +174,6 @@ function createTrials(data) {
         choices: cur_images,
         set_background: cur_background,
         trial_duration: 6000,
-        //tiral_duration: 120000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
         margin_left: ['0px','0px'],
@@ -202,7 +202,7 @@ function createTrials(data) {
       var FAM_LWL_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
-        choices: cur_images == [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['right_image']+imageStop],
+        choices: cur_test_images,
         set_background: cur_background,
         trial_duration: 15000,
         //tiral_duration: 120000,
