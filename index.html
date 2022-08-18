@@ -121,7 +121,7 @@ function createTrials(data) {
     var cur_trial_type = data[i]['trial_type'];
     var cur_stimulus = audioExt+data[i]['auditory_stimulus']+".wav";
     var cur_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['center_image']+imageStop, imageStart+data[i]['right_image']+imageStop];
-    var cur_test_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['right_image']+imageStop];
+   // var cur_test_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['right_image']+imageStop];
     // var cur_left_video = videoStart+data[i]['left_video']+videoStop;
     // var cur_right_video = videoStart+data[i]['right_video']+videoStop;
     // var cur_side = data[i]['playing_side'];
@@ -202,7 +202,7 @@ function createTrials(data) {
       var FAM_LWL_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
-        choices: cur_test_images,
+        choices: cur_images,
         set_background: cur_background,
         trial_duration: 15000,
         //tiral_duration: 120000,
@@ -461,7 +461,27 @@ var audio = [
 "where_apple.wav",
 "where_ball.wav",
 "wow_cool_x4.wav",
-];
+"E_hiDoa",
+"E_it.that_apple",
+"E_that.it_truck",
+"E_see.it_ball",
+"E_that.see_shoe",
+"E_that.see_kita",
+"E_see.that_fisp
+"E_it.that_manu",
+"E_it.that_pan",
+"E_it.see_fisp
+"E_that.see_pan",
+"E_see.that_kita
+"E_it.see_man",
+"E_see.that_zorc",
+"E_that.see_wiso
+"E_it.see_iso",
+"E_see.that_dof",
+"E_it.see_zorch
+"E_that.see_iso",
+"E_see.that_dof",
+"E_it.see_wiso",];
 
 var preload_audio  = [];
 
