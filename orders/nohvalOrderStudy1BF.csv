@@ -43,7 +43,7 @@
 5,41,E_see.that_zorch,BlackGirlOutline,BlackBoyGray,nov5S1Circle,zorch,left,0,,black-background,Teaching
 5,42,seethat_jick,BlackGirlGray,BlackBoyOutline,nov5S1Circle,jick,right,1,,black-background,Teaching
 5,43,thatsee_teebu,BlackGirlGray,BlackBoyOutline,nov6S1Circle,teebu,right,0,,black-background,Teaching
-5,44,E_that.see_wiso,BlackGirlOutline,BlackBoyGray,nov6S1Circle,wiso,left,1,,black-background,Teaching
+5,44,E_that.it_wiso,BlackGirlOutline,BlackBoyGray,nov6S1Circle,wiso,left,1,,black-background,Teaching
 5,45,E_it.see_isot,BlackGirlOutline,BlackBoyGray,nov7S1Circle,isot,left,0,,black-background,Teaching
 5,46,thatsee_akar,BlackGirlGray,BlackBoyOutline,nov7S1Circle,akar,right,1,,black-background,Teaching
 5,47,seethat_leem,BlackGirlGray,BlackBoyOutline,nov8S1Circle,leam,right,0,,black-background,Teaching
@@ -54,7 +54,7 @@
 5,52,thatsee_akar,BlackGirlGray,BlackBoyOutline,nov7S1Circle,akar,right,1,,black-background,Teaching
 5,53,E_see.that_doff,BlackGirlOutline,BlackBoyGray,nov8S1Circle,doff,left,0,,black-background,Teaching
 5,54,seethat_leem,BlackGirlGray,BlackBoyOutline,nov8S1Circle,leam,right,1,,black-background,Teaching
-5,55,E_it.see_wiso,BlackGirlOutline,BlackBoyGray,nov6S1Circle,wiso,left,0,,black-background,Teaching
+5,55,E_it.that_wiso,BlackGirlOutline,BlackBoyGray,nov6S1Circle,wiso,left,0,,black-background,Teaching
 5,56,thatsee_teebu,BlackGirlGray,BlackBoyOutline,nov6S1Circle,teebu,right,1,,black-background,Teaching
 6,41,find_zorch,nov5S1Square,nov7S1Square,Black,zorch,left,0,,black-background,ImmTest
 6,42,find_doff,nov6S1Square,nov8S1Square,Black,doff,right,1,,black-background,ImmTest
