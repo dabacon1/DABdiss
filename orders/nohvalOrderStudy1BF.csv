@@ -4,8 +4,8 @@
 1,2,hiRaylor,BlackGirlGray,BlackBoyOutline,circleBlack,Ingroup,right,1,,black-background,intro
 1,3,E_it.that_apple,BlackGirlOutline,BlackBoyGray,ApplecircleBlack,appleOutgroup,left,0,,black-background,FAM
 1,4,itssee_apple,BlackGirlGray,BlackBoyOutline,ApplecircleBlack,appleIngroup,right,1,,black-background,FAM
-1,5,E_that.it_truck,BlackGirlGray,BlackBoyOutline,TruckcircleBlack,carIngroup,right,1,,black-background,FAM
-1,6,itssee_car,BlackGirlOutline,BlackBoyGray,TruckcircleBlack,carOutgropu,left,0,,black-background,FAM
+1,5,itssee_car,BlackGirlGray,BlackBoyOutline,TruckcircleBlack,carIngroup,right,1,,black-background,FAM
+1,6,E_that.it_truck,BlackGirlOutline,BlackBoyGray,TruckcircleBlack,carOutgropu,left,0,,black-background,FAM
 1,7,E_see.it_ball,BlackGirlOutline,BlackBoyGray,BallcircleBlack,ballOutgroup,left,0,,black-background,FAM
 1,8,seethat_ball,BlackGirlGray,BlackBoyOutline,BallcircleBlack,ballIngroup,right,1,,black-background,FAM
 1,9,E_that.see_shoe,BlackGirlOutline,BlackBoyGray,ShoecircleBlack,shoeOutgroup,left,0,,black-background,FAM
