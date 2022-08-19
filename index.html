@@ -61,8 +61,16 @@ if (trial_order == "S1AF") {
   	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WF.csv'
 } else if (trial_order =="S2BM") {
   	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BM.csv'
-}  else if (trial_order =="S2WM") {
+} else if (trial_order =="S2WM") {
   	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WM.csv'
+} else if (trial_order =="S1DA") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1DA.csv'
+} else if (trial_order =="S1DB") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1DB.csv'
+} else if (trial_order =="S2DA") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2DA.csv'
+} else if (trial_order =="S2DB") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2DB.csv'
 }
 
 //lwl orders
@@ -287,7 +295,35 @@ function createTrials(data) {
       }
         timeline.push(ImmTest_trials);
     }
-
+	if (cur_trial_type == "DelayTest"){
+	      //define immediate test trials
+	      var DelayTest_trials = {
+		type: 'audio-button-response-flexiblelocations',
+		stimulus: cur_stimulus,
+		choices: cur_images,
+		set_background: cur_background,
+		trial_duration: 15000,
+		//tiral_duration: 120000,
+		margin_top: ['0px','0px'],
+		margin_bottom: ['0px','0px'],
+		margin_left: ['0px','0px'],
+		margin_right: ['0px','0px'],
+		response_possible: true,
+		response_ends_trial: true,
+		data:{
+			left_image: data[i]['left_image'],
+			right_image: data[i]['right_image'],
+			target_label: data[i]['target_label'],
+			target_side: data[i]['target_side'],
+		trial_type: data[i]['trial_type'],
+			correct_response: data[i]['correct_response'],
+			background: data[i]['background']},
+		on_finish: function(data) {
+		  data.correct = data.button_pressed == data.correct_response;
+		}
+	      }
+		timeline.push(DelayTest_trials);
+	    }
     if (cur_trial_type == "filler"){
       //define filler trials
      	var filler_trials = {
