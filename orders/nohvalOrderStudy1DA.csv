@@ -20,4 +20,4 @@
 1,19,find_wiso500,nov6S1Square,nov7S1Square,Black,wiso,left,0,,black-background,DelayTest
 1,20,where_vab500,nov5S1Square,nov7S1Square,Black,vab,right,2,,black-background,DelayTest
 1,21,find_truck500,truckSquare,ballSquare,Black,car,left,0,,black-background,FAM_LWL
-1,22,allDone,LoceanBlack,RoceanBlack,Black,AG,center,1,,black-background,filler
+1,22,alldone,LoceanBlack,RoceanBlack,Black,AG,center,1,,black-background,filler
