@@ -106,9 +106,9 @@ function createTrials(data) {
     delay_after: 250
   }
 
-  timeline.push(welcome);
+ timeline.push(welcome);
 
-  var audio_test = {
+  /* var audio_test = {
 	type: "fullscreen",
     stimulus:"stimuli/sounds/wow_cool_x4.wav",
     message: "",
@@ -120,12 +120,12 @@ function createTrials(data) {
    /* choices:['ALL_KEYS'],
    /* prompt: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>"
   }*/
-  timeline.push(audio_test);
+  /* timeline.push(audio_test); */
 
   var expLength = data.length;
   var audioExt="stimuli/sounds/"
   var imageStart='<img src= "stimuli/images/'
-  var imageStop='.jpg" title = "" width="100" height="300">'
+  var imageStop='.jpg" title = "" width="200" height="300">'
   // var videoStart = "stimuli/videos/"
   // var videoStop = ".mp4"
 
