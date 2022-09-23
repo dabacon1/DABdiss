@@ -109,11 +109,16 @@ function createTrials(data) {
   timeline.push(welcome);
 
   var audio_test = {
-    type: "audio-keyboard-response",
-    stimulus:"stimuli/sounds/wow_cool_x4.wav",
-    choices:['ALL_KEYS'],
-    prompt: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>"
+	type: "fullscreen",
+    message: "",
+    button_label: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>",
+    delay_after: 250
   }
+    /*type: "audio-keyboard-response",
+    stimulus:"stimuli/sounds/wow_cool_x4.wav",
+   /* choices:['ALL_KEYS'],
+   /* prompt: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>"
+  }*/
   timeline.push(audio_test);
 
   var expLength = data.length;
