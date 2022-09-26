@@ -544,7 +544,49 @@ var audio = [
 "where_teebu500",
 "find_leam500",
 "find_wiso500",
-"takeBreak",];
+"takeBreak",
+"E_hiTevi",
+"K_hiKito",
+"E_that.see_glark",
+"K_see.it_bem",
+"K_that.it_virdex",
+"E_see.that_tanzer",
+"E_it.that_krat",
+"K_see.it_juff",
+"E_it.that_fiffen",
+"K_it.that_coodle",
+"K_that.it_virdex",
+"E_it.see_tanzer",
+"E_that.see_fiffen",
+"K_it.that_coodle",
+"K_see.it_bem",
+"E_see.that_glark",
+"E_it.see_krat",
+"K_see.it_juff",
+"where_krat500",
+"find_tanzer500",
+"where_fiffen500",
+"where_virdex500",
+"where_bem500",
+"find_coodle500",
+"find_glark500",
+"find_juff500",
+"E_see.that_osip",
+"K_that.see_modi",
+"K_see.that_hux",
+"E_that.it_zeb",
+"E_it.see_roke",
+"K_it.see_erag",
+"K_it.see_pisk",
+"E_see.that_wilp",
+"find_osip500",
+"find_wilp500",
+"where_modi500",
+"find_roke500",
+"where_erag500",
+"find_hux500",
+"where_pisk500",
+"where_zeb500",];
 
 var preload_audio  = [];
 
@@ -569,19 +611,19 @@ jsPsych.init({ //js.psych initializes
 
 
 
-// function save_data(experiment, version,identifier, data){
-// 	$.ajax({
-// 		type: 'post',
-// 		cache: false,
-// 		url: 'https://data.infantlearning.waisman.wisc.edu/infantdb/datastore/save/',
-// 		data: {
-// 			experiment: experiment,
-// 	version: version,
-// 			identifier: identifier,
-// 			data: data
-// 		}
-// 	})
-// };
+function save_data(experiment, version,identifier, data){
+	$.ajax({
+ 		type: 'post',
+ 		cache: false,
+ 		url: 'https://data.infantlearning.waisman.wisc.edu/infantdb/datastore/save/',
+ 		data: {
+			experiment: experiment,
+ 	version: version,
+ 			identifier: identifier,
+			data: data
+ 		}
+	})
+ };
 
 
 </script>
