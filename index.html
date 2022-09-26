@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>NOHvAL Experiment</title>
+  <title>Growl and Roar Experiment</title>
   <meta charset="utf-8"/>
   <script src="jspsych-6.1.0/jspsych.js"> </script>
   <script src="jspsych-6.1.0/plugins/jspsych-audio-keyboard-response.js"></script>
@@ -39,60 +39,60 @@ var trial_order = jsPsych.data.getURLVariable('order')
 // read from a public spreadsheet for  trials
 // use the publish link NOT the sharing link
 
-if (trial_order == "S1AF1") {
-	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AF.csv'
-} else if (trial_order =="S1AF2") {
-	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AFb.csv'
-} else if (trial_order =="S1AM1") {
-	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AM.csv'
-} else if (trial_order =="S1AM2") {
-	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AMb.csv'
-} else if (trial_order =="S1BF1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BF.csv'
-} else if (trial_order =="S1BF2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BFb.csv'
-} else if (trial_order =="S1BM1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BM.csv'
-} else if (trial_order =="S1BM2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BMb.csv'
-} else if (trial_order =="S1LF1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LF.csv'
-} else if (trial_order =="S1LF2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LFb.csv'
-} else if (trial_order =="S1LM1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LM.csv'
-} else if (trial_order =="S1LM2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LMb.csv'
-} else if (trial_order =="S1WF1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WF.csv'
-} else if (trial_order =="S1WF2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WFb.csv'
-} else if (trial_order =="S1WM1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WM.csv'
-} else if (trial_order =="S1WM2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WMb.csv'
-} else if (trial_order =="S2BF1") {
- 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BF.csv'
-} else if (trial_order =="S2BF2") {
- 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BFb.csv'
-} else if (trial_order =="S2WF1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WF.csv'
-} else if (trial_order =="S2BM1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BM.csv'
-} else if (trial_order =="S2BM2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BMb.csv'
-} else if (trial_order =="S2WM1") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WM.csv'
-} else if (trial_order =="S2WM2") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WMb.csv'
-} else if (trial_order =="S1DA") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1DA.csv'
-} else if (trial_order =="S1DB") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1DB.csv'
-} else if (trial_order =="S2DA") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2DA.csv'
-} else if (trial_order =="S2DB") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2DB.csv'
+if (trial_order == "GrowlAF1") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AF.csv'
+} else if (trial_order =="GrowlAF2") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AFb.csv'
+} else if (trial_order =="GrowlAM1") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AM.csv'
+} else if (trial_order =="GrowlAM2") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AMb.csv'
+} else if (trial_order =="GrowlBF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BF.csv'
+} else if (trial_order =="GrowlBF2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BFb.csv'
+} else if (trial_order =="GrowlBM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BM.csv'
+} else if (trial_order =="GrowlBM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BMb.csv'
+} else if (trial_order =="GrowlLF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LF.csv'
+} else if (trial_order =="GrowlLF2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LFb.csv'
+} else if (trial_order =="GrowlLM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LM.csv'
+} else if (trial_order =="GrowlLM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LMb.csv'
+} else if (trial_order =="GrowlWF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WF.csv'
+} else if (trial_order =="GrowlWF2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WFb.csv'
+} else if (trial_order =="GrowlWM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WM.csv'
+} else if (trial_order =="GrowlWM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WMb.csv'
+} else if (trial_order =="RoarBF1") {
+ 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBF.csv'
+} else if (trial_order =="RoarBF2") {
+ 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBFb.csv'
+} else if (trial_order =="RoarWF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyWF.csv'
+} else if (trial_order =="RoarBM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBM.csv'
+} else if (trial_order =="RoarBM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBMb.csv'
+} else if (trial_order =="RoarWM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyWM.csv'
+} else if (trial_order =="RoarWM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyWMb.csv'
+} else if (trial_order =="GrowlDA") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudyDA.csv'
+} else if (trial_order =="GrowlDB") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudyDB.csv'
+} else if (trial_order =="RoarDA") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyDA.csv'
+} else if (trial_order =="RoarDB") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyDB.csv'
 }
 
 //lwl orders
