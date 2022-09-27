@@ -19,7 +19,7 @@
 3,17,K_see.it_bem,WhiteGirl2Gray,BlackGirl2Outline,nov1S2Circle,bem_Ingroup,right,2,,black-background,Teaching
 3,18,K_that.it_virdex,WhiteGirl2Gray,BlackGirl2Outline,nov2S2Circle,virdex_Ingroup,right,2,,black-background,Teaching
 3,19,E_see.that_tanzer,WhiteGirl2Outline,BlackGirl2Gray,nov2S2Circle,tanzer_Outgroup,left,0,,black-background,Teaching
-3,20,E_it.see_krat,WhiteGirl2Outline,BlackGirl2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
+3,20,E_it.that_krat,WhiteGirl2Outline,BlackGirl2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
 3,21,K_see.it_juff,WhiteGirl2Gray,BlackGirl2Outline,nov3S2Circle,juff_Ingroup,right,2,,black-background,Teaching
 3,22,E_that.see_fiffen,WhiteGirl2Outline,BlackGirl2Gray,nov4S2Circle,fiffen_Outgroup,left,0,,black-background,Teaching
 3,23,K_it.that_coodle,WhiteGirl2Gray,BlackGirl2Outline,nov4S2Circle,coodle_Ingroup,right,2,,black-background,Teaching
@@ -29,11 +29,11 @@
 3,27,K_it.that_coodle,WhiteGirl2Gray,BlackGirl2Outline,nov4S2Circle,coodle_Ingroup,right,2,,black-background,Teaching
 3,28,K_see.it_bem,WhiteGirl2Gray,BlackGirl2Outline,nov1S2Circle,bem_Ingroup,right,2,,black-background,Teaching
 3,29,E_that.see_glark,WhiteGirl2Outline,BlackGirl2Gray,nov1S2Circle,glark_Outgroup,left,0,,black-background,Teaching
-3,30,E_it.see_krat,WhiteGirl2Outline,BlackGirl2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
+3,30,E_it.that_krat,WhiteGirl2Outline,BlackGirl2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
 3,31,K_see.it_juff,WhiteGirl2Gray,BlackGirl2Outline,nov3S2Circle,juff_Ingroup,right,2,,black-background,Teaching
 4,32,where_krat500,nov1S2Square,nov3S2Square,Black,krat_Outgroup,right,2,,black-background,ImmTest
 4,33,find_tanzer500,nov2S2Square,nov4S2Square,Black,tanzer_Outgroup,left,0,,black-background,ImmTest
-4,34,where_fiffen500,nov4S2Square,nov1S2Square,Black,virdex_Ingroup,left,0,,black-background,ImmTest
+4,34,where_fiffen500,nov4S2Square,nov1S2Square,Black,fiffen_Outgroup,left,0,,black-background,ImmTest
 4,35,where_virdex500,nov3S2Square,nov2S2Square,Black,virdex_Ingroup,right,2,,black-background,ImmTest
 4,36,where_bem500,nov1S2Square,nov3S2Square,Black,bem_Ingroup,left,0,,black-background,ImmTest
 4,37,find_coodle500,nov2S2Square,nov4S2Square,Black,coodle_Ingroup,right,2,,black-background,ImmTest
@@ -62,6 +62,6 @@
 6,44,find_roke500,nov7S2Square,nov6S2Square,Black,roke_Outgroup,left,0,,black-background,ImmTest
 6,45,where_erag500,nov5S2Square,nov7S2Square,Black,erag_Ingroup,right,2,,black-background,ImmTest
 6,46,find_hux500,nov6S2Square,nov8S2Square,Black,hux_Ingroup,left,0,,black-background,ImmTest
-6,47,where_pisk500,nov8S2Square,nov5S2Square,Black,pisk,left,0,,black-background,ImmTest
-6,48,where_zeb500,nov7S2Square,nov6S2Square,Black,zeb,right,2,,black-background,ImmTest
+6,47,where_pisk500,nov8S2Square,nov5S2Square,Black,pisk_Ingroup,left,0,,black-background,ImmTest
+6,48,where_zeb500,nov7S2Square,nov6S2Square,Black,zeb_Outgroup,right,2,,black-background,ImmTest
 6,49,takeBreak,LoceanBlack,RoceanBlack,Black,AG,center,1,,black-background,filler

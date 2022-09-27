@@ -62,6 +62,6 @@
 6,44,find_roke500,nov7S2Square,nov6S2Square,Black,roke_Ingroup,left,0,,black-background,ImmTest
 6,45,where_erag500,nov5S2Square,nov7S2Square,Black,erag_Outgroup,right,2,,black-background,ImmTest
 6,46,find_hux500,nov6S2Square,nov8S2Square,Black,hux_Outgroup,left,0,,black-background,ImmTest
-6,47,where_pisk500,nov8S2Square,nov5S2Square,Black,pisk,left,0,,black-background,ImmTest
-6,48,where_zeb500,nov7S2Square,nov6S2Square,Black,zeb,right,2,,black-background,ImmTest
+6,47,where_pisk500,nov8S2Square,nov5S2Square,Black,pisk_Outgroup,left,0,,black-background,ImmTest
+6,48,where_zeb500,nov7S2Square,nov6S2Square,Black,zeb_Ingroup,right,2,,black-background,ImmTest
 6,49,takeBreak,LoceanBlack,RoceanBlack,Black,AG,center,1,,black-background,filler
