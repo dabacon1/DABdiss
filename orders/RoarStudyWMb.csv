@@ -19,7 +19,7 @@
 3,17,K_see.it_bem,BlackBoy2Gray,WhiteBoy2Outline,nov1S2Circle,bem_Ingroup,right,2,,black-background,Teaching
 3,18,K_that.it_virdex,BlackBoy2Gray,WhiteBoy2Outline,nov2S2Circle,virdex_Ingroup,right,2,,black-background,Teaching
 3,19,E_see.that_tanzer,BlackBoy2Outline,WhiteBoy2Gray,nov2S2Circle,tanzer_Outgroup,left,0,,black-background,Teaching
-3,20,E_it.that_krat,BlackBoy2Outline,WhiteBoy2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
+3,20,E_it.see_krat,BlackBoy2Outline,WhiteBoy2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
 3,21,K_see.it_juff,BlackBoy2Gray,WhiteBoy2Outline,nov3S2Circle,juff_Ingroup,right,2,,black-background,Teaching
 3,22,E_that.see_fiffen,BlackBoy2Outline,WhiteBoy2Gray,nov4S2Circle,fiffen_Outgroup,left,0,,black-background,Teaching
 3,23,K_it.that_coodle,BlackBoy2Gray,WhiteBoy2Outline,nov4S2Circle,coodle_Ingroup,right,2,,black-background,Teaching
@@ -47,12 +47,12 @@
 5,45,E_it.see_roke,BlackBoy2Outline,WhiteBoy2Gray,nov7S2Circle,roke_Outgroup,left,0,,black-background,Teaching
 5,46,K_it.see_erag,BlackBoy2Gray,WhiteBoy2Outline,nov7S2Circle,erag_Ingroup,right,2,,black-background,Teaching
 5,47,K_it.see_pisk,BlackBoy2Gray,WhiteBoy2Outline,nov8S2Circle,pisk_Ingroup,right,2,,black-background,Teaching
-5,48,E_see.that_wilp,BlackBoy2Outline,WhiteBoy2Gray,nov8S2Circle,wilp_Outgroup,left,0,,black-background,Teaching
+5,48,E_see.it_wilp,BlackBoy2Outline,WhiteBoy2Gray,nov8S2Circle,wilp_Outgroup,left,0,,black-background,Teaching
 5,49,K_that.see_modi,BlackBoy2Gray,WhiteBoy2Outline,nov5S2Circle,modi_Ingroup,right,2,,black-background,Teaching
 5,50,E_see.that_osip,BlackBoy2Outline,WhiteBoy2Gray,nov5S2Circle,osip_Outgroup,left,0,,black-background,Teaching
 5,51,E_it.see_roke,BlackBoy2Outline,WhiteBoy2Gray,nov7S2Circle,roke_Outgroup,left,0,,black-background,Teaching
 5,52,K_it.see_erag,BlackBoy2Gray,WhiteBoy2Outline,nov7S2Circle,erag_Ingroup,right,2,,black-background,Teaching
-5,53,E_see.that_wilp,BlackBoy2Outline,WhiteBoy2Gray,nov8S2Circle,wilp_Outgroup,left,0,,black-background,Teaching
+5,53,E_see.it_wilp,BlackBoy2Outline,WhiteBoy2Gray,nov8S2Circle,wilp_Outgroup,left,0,,black-background,Teaching
 5,54,K_it.see_pisk,BlackBoy2Gray,WhiteBoy2Outline,nov8S2Circle,pisk_Ingroup,right,2,,black-background,Teaching
 5,55,E_that.it_zeb,BlackBoy2Outline,WhiteBoy2Gray,nov6S2Circle,zeb_Outgroup,left,0,,black-background,Teaching
 5,56,K_see.that_hux,BlackBoy2Gray,WhiteBoy2Outline,nov6S2Circle,hux_Ingroup,right,2,,black-background,Teaching
