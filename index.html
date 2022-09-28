@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>NOHvAL Experiment</title>
+  <title>Growl and Roar Experiment</title>
   <meta charset="utf-8"/>
   <script src="jspsych-6.1.0/jspsych.js"> </script>
   <script src="jspsych-6.1.0/plugins/jspsych-audio-keyboard-response.js"></script>
@@ -23,7 +23,7 @@
   </style>
 </head>
 <body>
-  <div id="nohval-lwl"></div>
+  <div id="GrowlRoar-lwl"></div>
 </body>
 
 <script>
@@ -39,30 +39,62 @@ var trial_order = jsPsych.data.getURLVariable('order')
 // read from a public spreadsheet for  trials
 // use the publish link NOT the sharing link
 
-if (trial_order == "S1AF") {
-	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AF.csv'
-} else if (trial_order =="S1AM") {
-	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1AM.csv'
-} else if (trial_order =="S1BF") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BF.csv'
-} else if (trial_order =="S1BM") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1BM.csv'
-} else if (trial_order =="S1LF") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LF.csv'
-} else if (trial_order =="S1LM") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1LM.csv'
-} else if (trial_order =="S1WF") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WF.csv'
-} else if (trial_order =="S1WM") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy1WM.csv'
-} else if (trial_order =="S2BF") {
- 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BF.csv'
-} else if (trial_order =="S2WF") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WF.csv'
-} else if (trial_order =="S2BM") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2BM.csv'
-}  else if (trial_order =="S2WM") {
-  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/nohvalOrderStudy2WM.csv'
+if (trial_order == "GrowlAF1") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AF.csv'
+} else if (trial_order =="GrowlAF2") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AFb.csv'
+} else if (trial_order =="GrowlAM1") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AM.csv'
+} else if (trial_order =="GrowlAM2") {
+	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1AMb.csv'
+} else if (trial_order =="GrowlBF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BF.csv'
+} else if (trial_order =="GrowlBF2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BFb.csv'
+} else if (trial_order =="GrowlBM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BM.csv'
+} else if (trial_order =="GrowlBM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1BMb.csv'
+} else if (trial_order =="GrowlLF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LF.csv'
+} else if (trial_order =="GrowlLF2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LFb.csv'
+} else if (trial_order =="GrowlLM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LM.csv'
+} else if (trial_order =="GrowlLM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1LMb.csv'
+} else if (trial_order =="GrowlWF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WF.csv'
+} else if (trial_order =="GrowlWF2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WFb.csv'
+} else if (trial_order =="GrowlWM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WM.csv'
+} else if (trial_order =="GrowlWM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudy1WMb.csv'
+} else if (trial_order =="RoarBF1") {
+ 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBF.csv'
+} else if (trial_order =="RoarBF2") {
+ 	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBFb.csv'
+} else if (trial_order =="RoarWF1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyWF.csv'
+} else if (trial_order =="RoarWF2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyWFb.csv'
+} else if (trial_order =="RoarBM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBM.csv'
+} else if (trial_order =="RoarBM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyBMb.csv'
+} else if (trial_order =="RoarWM1") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyWM.csv'
+} else if (trial_order =="RoarWM2") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyWMb.csv'
+} else if (trial_order =="GrowlDA") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudyDA.csv'
+} else if (trial_order =="GrowlDB") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/GrowlStudyDB.csv'
+} else if (trial_order =="RoarDA") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyDA.csv'
+} else if (trial_order =="RoarDB") {
+  	var publicSpreadsheetUrl = 'https://raw.githubusercontent.com/dabacon1/DABdiss/master/orders/RoarStudyDB.csv'
 }
 
 //lwl orders
@@ -98,20 +130,26 @@ function createTrials(data) {
     delay_after: 250
   }
 
-  timeline.push(welcome);
+ timeline.push(welcome);
 
-  var audio_test = {
-    type: "audio-keyboard-response",
+  /* var audio_test = {
+	type: "fullscreen",
     stimulus:"stimuli/sounds/wow_cool_x4.wav",
-    choices:['space'],
-    prompt: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>"
+    message: "",
+    button_label: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>",
+    delay_after: 250
   }
-  timeline.push(audio_test);
+    /*type: "audio-keyboard-response",
+    stimulus:"stimuli/sounds/wow_cool_x4.wav",
+   /* choices:['ALL_KEYS'],
+   /* prompt: "<p> Please turn the volume up or down, so that the volume resembles a person's voice in the room. <br> Please tell the experimenter when you think the level is comfortable for you.</br> </p>"
+  }*/
+  /* timeline.push(audio_test); */
 
   var expLength = data.length;
   var audioExt="stimuli/sounds/"
   var imageStart='<img src= "stimuli/images/'
-  var imageStop='['.jpg','.png'] title = "" width="300" height="300">'
+  var imageStop='.jpg" title = "" width="200" height="350">'
   // var videoStart = "stimuli/videos/"
   // var videoStop = ".mp4"
 
@@ -120,7 +158,8 @@ function createTrials(data) {
     //define stimuli variables
     var cur_trial_type = data[i]['trial_type'];
     var cur_stimulus = audioExt+data[i]['auditory_stimulus']+".wav";
-    var cur_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['center_image']+imageStop], imageStart+data[i]['right_image']+imageStop];
+    var cur_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['center_image']+imageStop, imageStart+data[i]['right_image']+imageStop];
+   // var cur_test_images = [imageStart+data[i]['left_image']+imageStop, imageStart+data[i]['right_image']+imageStop];
     // var cur_left_video = videoStart+data[i]['left_video']+videoStop;
     // var cur_right_video = videoStart+data[i]['right_video']+videoStop;
     // var cur_side = data[i]['playing_side'];
@@ -134,20 +173,51 @@ function createTrials(data) {
     //define set up visual display
     var cur_background = data[i]['background'];
 
-    if (cur_trial_type == "FAM"){
-      //defne Familiarization trials
+        if (cur_trial_type == "intro"){
+      //define kid introduction trials
+      var intro_trials = {
+        type: 'audio-button-response-flexiblelocations',
+        stimulus: cur_stimulus,
+        choices: cur_images,
+        set_background: cur_background,
+        trial_duration: 7500,
+        //tiral_duration: 120000,
+        margin_top: ['0px','0px'],
+        margin_bottom: ['0px','0px'],
+        margin_left: ['0px','0px'],
+        margin_right: ['0px','0px'],
+        response_possible: false,
+	response_ends_trial: false,
+        data:{
+        left_image: data[i]['left_image'],
+        center_image: data[i]['center_image'],
+        right_image: data[i]['right_image'],
+        target_label: data[i]['target_label'],
+        target_side: data[i]['target_side'],
+        trial_type: data[i]['trial_type'],
+        correct_response: data[i]['correct_response'],
+        background: data[i]['background']},
+        on_finish: function(data) {
+          data.correct = data.button_pressed == data.correct_response;
+        }
+      }
+        timeline.push(intro_trials);
+    }
+	  
+	if (cur_trial_type == "FAM"){
+      //define Familiarization trials
       var fam_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
         set_background: cur_background,
-        trial_duration: 4500,
-        //tiral_duration: 120000,
+        trial_duration: 6000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
-        margin_left: ['0px','250px'],
-        margin_right: ['250px','0px'],
-        response_ends_trial: false,
+        margin_left: ['0px','0px'],
+        margin_right: ['0px','0px'],
+        response_possible: false,
+	response_ends_trial: false,
         data:{
         left_image: data[i]['left_image'],
         center_image: data[i]['center_image'],
@@ -166,19 +236,20 @@ function createTrials(data) {
 
 
     if (cur_trial_type == "FAM_LWL"){
-      //defne LWL trials
-      var lwl_trials = {
+      //define familiar test trials
+      var FAM_LWL_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
         set_background: cur_background,
-        trial_duration: 4500,
+        trial_duration: 15000,
         //tiral_duration: 120000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
-        margin_left: ['0px','250px'],
-        margin_right: ['250px','0px'],
-        response_ends_trial: false,
+        margin_left: ['0px','0px'],
+        margin_right: ['0px','0px'],
+        response_possible: true,
+	response_ends_trial: true,
         data:{
     		left_image: data[i]['left_image'],
     		right_image: data[i]['right_image'],
@@ -191,25 +262,27 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(lwl_trials);
+        timeline.push(FAM_LWL_trials);
     }
 
     if (cur_trial_type == "Teaching"){
-      //defne LWL trials
-      var lwl_trials = {
+      //define teaching trials
+	var Teaching_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
         set_background: cur_background,
-        trial_duration: 4500,
+        trial_duration: 6000,
         //tiral_duration: 120000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
-        margin_left: ['0px','250px'],
-        margin_right: ['250px','0px'],
-        response_ends_trial: false,
+        margin_left: ['0px','0px'],
+        margin_right: ['0px','0px'],
+        response_possible: false,
+	response_ends_trial: false,
         data:{
         left_image: data[i]['left_image'],
+        center_image: data[i]['center_image'],
         right_image: data[i]['right_image'],
         target_label: data[i]['target_label'],
         target_side: data[i]['target_side'],
@@ -220,23 +293,24 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(lwl_trials);
+        timeline.push(Teaching_trials);
     }
 
     if (cur_trial_type == "ImmTest"){
-      //defne LWL trials
-      var lwl_trials = {
+      //define immediate test trials
+      var ImmTest_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
         set_background: cur_background,
-        trial_duration: 4500,
+        trial_duration: 15000,
         //tiral_duration: 120000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
-        margin_left: ['0px','250px'],
-        margin_right: ['250px','0px'],
-        response_ends_trial: false,
+        margin_left: ['0px','0px'],
+        margin_right: ['0px','0px'],
+        response_possible: true,
+	response_ends_trial: true,
         data:{
     		left_image: data[i]['left_image'],
     		right_image: data[i]['right_image'],
@@ -249,12 +323,40 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(lwl_trials);
+        timeline.push(ImmTest_trials);
     }
-
+	if (cur_trial_type == "DelayTest"){
+	      //define immediate test trials
+	      var DelayTest_trials = {
+		type: 'audio-button-response-flexiblelocations',
+		stimulus: cur_stimulus,
+		choices: cur_images,
+		set_background: cur_background,
+		trial_duration: 15000,
+		//tiral_duration: 120000,
+		margin_top: ['0px','0px'],
+		margin_bottom: ['0px','0px'],
+		margin_left: ['0px','0px'],
+		margin_right: ['0px','0px'],
+		response_possible: true,
+		response_ends_trial: true,
+		data:{
+			left_image: data[i]['left_image'],
+			right_image: data[i]['right_image'],
+			target_label: data[i]['target_label'],
+			target_side: data[i]['target_side'],
+		trial_type: data[i]['trial_type'],
+			correct_response: data[i]['correct_response'],
+			background: data[i]['background']},
+		on_finish: function(data) {
+		  data.correct = data.button_pressed == data.correct_response;
+		}
+	      }
+		timeline.push(DelayTest_trials);
+	    }
     if (cur_trial_type == "filler"){
-      //defne LWL trials
-      var lwl_trials = {
+      //define filler trials
+     	var filler_trials = {
         type: 'audio-button-response-flexiblelocations',
         stimulus: cur_stimulus,
         choices: cur_images,
@@ -263,11 +365,13 @@ function createTrials(data) {
         //tiral_duration: 120000,
         margin_top: ['0px','0px'],
         margin_bottom: ['0px','0px'],
-        margin_left: ['0px','250px'],
-        margin_right: ['250px','0px'],
-        response_ends_trial: false,
+        margin_left: ['0px','0px'],
+        margin_right: ['0px','0px'],
+        response_possible: false,
+	response_ends_trial: false,
         data:{
         left_image: data[i]['left_image'],
+        center_image: data[i]['center_image'],
         right_image: data[i]['right_image'],
         target_label: data[i]['target_label'],
         target_side: data[i]['target_side'],
@@ -278,9 +382,9 @@ function createTrials(data) {
           data.correct = data.button_pressed == data.correct_response;
         }
       }
-        timeline.push(lwl_trials);
+        timeline.push(filler_trials);
     }
-
+  }
 
   var fullscreen_exit = {
     type: 'fullscreen',
@@ -294,26 +398,36 @@ var imageExt = 'stimuli/images/'
 
 
 var images = [
-"Alien.jpg",
-"AlienOutline.jpg",
 "ApplecircleBlack.jpg",
-"ApplesquareBlack.jpg",
+"appleSquare.jpg",
 "AsianBoy.jpg",
+"AsianBoyGray.jpg",
 "AsianBoyOutline.jpg",
 "AsianGirl.jpg",
+"AsianGirlGray.jpg",
 "AsianGirlOutline.jpg",
 "BallcircleBlack.jpg",
-"BallsquareBlack.jpg",
+"ballSquare.jpg",
 "Black.jpg",
 "black-background.jpg",
 "BlackBoy.jpg",
+"BlackBoyGray.jpg",
 "BlackBoyOutline.jpg",
 "BlackGirl.jpg",
+"BlackGirlGray.jpg",
 "BlackGirlOutline.jpg",
+"BlackBoy2.jpg",
+"BlackBoy2Gray.jpg",
+"BlackBoy2Outline.jpg",
+"BlackGirl2.jpg",
+"BlackGirl2Gray.jpg",
+"BlackGirl2Outline.jpg",
 "circleBlack.jpg",
 "LatinaGirl.jpg",
+"LatinaGirlGray.jpg",
 "LatinaGirlOutline.jpg",
 "LatinoBoy.jpg",
+"LatinoBoyGray.jpg",
 "LatinoBoyOutline.jpg",
 "LballoonsBlack.jpg",
 "LbeachBlack.jpg",
@@ -335,19 +449,43 @@ var images = [
 "nov7S1Square.jpg",
 "nov8S1Circle.jpg",
 "nov8S1Square.jpg",
+"nov1S2Circle.jpg",
+"nov1S2Square.jpg",
+"nov2S2Circle.jpg",
+"nov2S2Square.jpg",
+"nov3S2Circle.jpg",
+"nov3S2Square.jpg",
+"nov4S2Circle.jpg",
+"nov4S2Square.jpg",
+"nov5S2Circle.jpg",
+"nov5S2Square.jpg",
+"nov6S2Circle.jpg",
+"nov6S2Square.jpg",
+"nov7S2Circle.jpg",
+"nov7S2Square.jpg",
+"nov8S2Circle.jpg",
+"nov8S2Square.jpg",
 "RballoonsBlack.jpg",
 "RbeachBlack.jpg",
 "RfireworksBlack.jpg",
 "RoceanBlack.jpg",
 "ShoecircleBlack.jpg",
-"ShoesquareBlack.jpg",
+"shoeSquare.jpg",
 "squareBlack.jpg",
 "TruckcircleBlack.jpg",
-"TrucksquareBlack.jpg",
+"truckSquare.jpg",
 "WhiteBoy.jpg",
+"WhiteBoyGray.jpg",
 "WhiteBoyOutline.jpg",
 "WhiteGirl.jpg",
-"WhiteGirlOutline.jpg",]
+"WhiteGirlGray.jpg",
+"WhiteGirlOutline.jpg",
+"WhiteBoy2.jpg",
+"WhiteBoy2Gray.jpg",
+"WhiteBoy2Outline.jpg",
+"WhiteGirl2.jpg",
+"WhiteGirl2Gray.jpg",
+"WhiteGirl2Outline.jpg",]
 
 var preload_images=[];
 
@@ -357,55 +495,98 @@ for (var k = 0; k < images.length; k++) {
 
 
 var audio = [
-"End.wav",
-"find_akar.wav",
-"find_blicket.wav",
-"find_car.wav",
-"find_cheem.wav",
-"find_doff.wav",
-"find_fisp.wav",
-"find_isot.wav",
-"find_jick.wav",
-"find_kita.wav",
-"find_leem.wav",
-"find_manu.wav",
-"find_pank.wav",
-"find_regli.wav",
-"find_shoe.wav",
-"find_smope.wav",
-"find_teebu.wav",
-"find_wiso.wav",
-"find_zorch.wav",
-"Halfway.wav",
-"Intro.wav",
-"itssee_apple.wav",
-"itssee_car.wav",
-"itsthat_apple.wav",
-"seethat_ball.wav",
-"seethat_blicket.wav",
-"seethat_cheem.wav",
-"seethat_fisp.wav",
-"seethat_jick.wav",
-"seethat_leem.wav",
-"seethat_manu.wav",
-"seethat_pank.wav",
-"seethat_regli.wav",
-"seethat_shoe.wav",
-"seethat_zorch.wav",
-"thatits_ball.wav",
-"thatits_car.wav",
-"thatits_shoe.wav",
-"thatsee_akar.wav",
-"thatsee_doff.wav",
-"thatsee_isot.wav",
-"thatsee_kita.wav",
-"thatsee_smope.wav",
-"thatsee_teebu.wav",
-"thatsee_wiso.wav",
-"where_apple.wav",
-"where_ball.wav",
-"wow_cool_x4.wav",
-];
+"meetNewFriends",
+"E_hiDoa",
+"K_hiRaylor",
+"E_it.that_apple",
+"K_it.see_apple",
+"K_that.it_truck",
+"E_that.it_truck",
+"E_see.it_ball",
+"K_that.it_ball",
+"E_that.see_shoe",
+"K_see.that_shoe",
+"find_truck500",
+"where_apple500",
+"find_ball500",
+"where_shoe500",
+"greatJob",
+"E_that.see_koba",
+"K_see.it_blicket",
+"K_that.it_cheem",
+"E_see.that_fisp",
+"E_it.that_manu",
+"K_see.it_regli",
+"E_it.that_pank",
+"K_it.that_smope",
+"where_manu500",
+"where_fisp500",
+"find_pank500",
+"find_cheem500",
+"where_blicket500",
+"where_smope500",
+"find_koba500",
+"find_regli500",
+"greatListening",
+"E_see.that_zorch",
+"K_that.see_jick",
+"K_see.that_teebu",
+"E_that.it_wiso",
+"E_that.see_vab",
+"K_it.see_akar",
+"K_it.see_leam",
+"E_see.that_doff",
+"where_zorch500",
+"find_doff500",
+"find_jick500",
+"where_vab500",
+"where_akar500",
+"where_teebu500",
+"find_leam500",
+"find_wiso500",
+"takeBreak",
+"E_hiTevi",
+"K_hiKito",
+"E_that.see_glark",
+"K_see.it_bem",
+"K_that.it_virdex",
+"E_see.that_tanzer",
+"E_it.that_krat",
+"K_see.it_juff",
+"E_it.that_fiffen",
+"K_it.that_coodle",
+"K_that.it_virdex",
+"E_it.see_tanzer",
+"E_that.see_fiffen",
+"K_it.that_coodle",
+"K_see.it_bem",
+"E_see.that_glark",
+"E_it.see_krat",
+"K_see.it_juff",
+"where_krat500",
+"find_tanzer500",
+"where_fiffen500",
+"where_virdex500",
+"where_bem500",
+"find_coodle500",
+"find_glark500",
+"find_juff500",
+"E_see.that_osip",
+"K_that.see_modi",
+"K_see.that_hux",
+"E_that.it_zeb",
+"E_it.see_roke",
+"K_it.see_erag",
+"K_it.see_pisk",
+"E_see.that_wilp",
+"find_osip500",
+"find_wilp500",
+"where_modi500",
+"find_roke500",
+"where_erag500",
+"find_hux500",
+"where_pisk500",
+"where_zeb500",];
 
 var preload_audio  = [];
 
@@ -423,26 +604,26 @@ jsPsych.init({ //js.psych initializes
   preload_images:preload_images,
 	default_iti: 500,
   on_finish: function() {
-    //jsPsych.data.displayData();
+  save_data('growlroar','trialorder',subject_id, jsPsych.data.dataAsCSV()); 
   }
 });
 };
 
 
 
-// function save_data(experiment, version,identifier, data){
-// 	$.ajax({
-// 		type: 'post',
-// 		cache: false,
-// 		url: 'https://data.infantlearning.waisman.wisc.edu/infantdb/datastore/save/',
-// 		data: {
-// 			experiment: experiment,
-// 	version: version,
-// 			identifier: identifier,
-// 			data: data
-// 		}
-// 	})
-// };
+function save_data(experiment, version,identifier, data){
+	$.ajax({
+ 		type: 'post',
+ 		cache: false,
+ 		url: 'https://data.infantlearning.waisman.wisc.edu/infantdb/datastore/save/',
+ 		data: {
+			experiment: experiment,
+ 	version: version,
+ 			identifier: identifier,
+			data: data
+ 		}
+	})
+ };
 
 
 </script>
