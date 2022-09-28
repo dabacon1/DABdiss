@@ -19,7 +19,7 @@
 3,17,K_see.it_bem,BlackBoy2Gray,WhiteBoy2Outline,nov1S2Circle,bem_Ingroup,right,2,,black-background,Teaching
 3,18,K_that.it_virdex,BlackBoy2Gray,WhiteBoy2Outline,nov2S2Circle,virdex_Ingroup,right,2,,black-background,Teaching
 3,19,E_see.that_tanzer,BlackBoy2Outline,WhiteBoy2Gray,nov2S2Circle,tanzer_Outgroup,left,0,,black-background,Teaching
-3,20,E_it.see_krat,BlackBoy2Outline,WhiteBoy2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
+3,20,E_it.that_krat,BlackBoy2Outline,WhiteBoy2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
 3,21,K_see.it_juff,BlackBoy2Gray,WhiteBoy2Outline,nov3S2Circle,juff_Ingroup,right,2,,black-background,Teaching
 3,22,E_that.see_fiffen,BlackBoy2Outline,WhiteBoy2Gray,nov4S2Circle,fiffen_Outgroup,left,0,,black-background,Teaching
 3,23,K_it.that_coodle,BlackBoy2Gray,WhiteBoy2Outline,nov4S2Circle,coodle_Ingroup,right,2,,black-background,Teaching
@@ -29,7 +29,7 @@
 3,27,K_it.that_coodle,BlackBoy2Gray,WhiteBoy2Outline,nov4S2Circle,coodle_Ingroup,right,2,,black-background,Teaching
 3,28,K_see.it_bem,BlackBoy2Gray,WhiteBoy2Outline,nov1S2Circle,bem_Ingroup,right,2,,black-background,Teaching
 3,29,E_that.see_glark,BlackBoy2Outline,WhiteBoy2Gray,nov1S2Circle,glark_Outgroup,left,0,,black-background,Teaching
-3,30,E_it.see_krat,BlackBoy2Outline,WhiteBoy2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
+3,30,E_it.that_krat,BlackBoy2Outline,WhiteBoy2Gray,nov3S2Circle,krat_Outgroup,left,0,,black-background,Teaching
 3,31,K_see.it_juff,BlackBoy2Gray,WhiteBoy2Outline,nov3S2Circle,juff_Ingroup,right,2,,black-background,Teaching
 4,32,where_krat500,nov1S2Square,nov3S2Square,Black,krat_Outgroup,right,2,,black-background,ImmTest
 4,33,find_tanzer500,nov2S2Square,nov4S2Square,Black,tanzer_Outgroup,left,0,,black-background,ImmTest

@@ -19,7 +19,7 @@
 3,17,K_see.it_bem,BlackGirl2Gray,WhiteGirl2Outline,nov1S2Circle,bem_Outgroup,right,2,,black-background,Teaching
 3,18,K_that.it_virdex,BlackGirl2Gray,WhiteGirl2Outline,nov2S2Circle,virdex_Outgroup,right,2,,black-background,Teaching
 3,19,E_see.that_tanzer,BlackGirl2Outline,WhiteGirl2Gray,nov2S2Circle,tanzer_Ingroup,left,0,,black-background,Teaching
-3,20,E_it.see_krat,BlackGirl2Outline,WhiteGirl2Gray,nov3S2Circle,krat_Ingroup,left,0,,black-background,Teaching
+3,20,E_it.that_krat,BlackGirl2Outline,WhiteGirl2Gray,nov3S2Circle,krat_Ingroup,left,0,,black-background,Teaching
 3,21,K_see.it_juff,BlackGirl2Gray,WhiteGirl2Outline,nov3S2Circle,juff_Outgroup,right,2,,black-background,Teaching
 3,22,E_that.see_fiffen,BlackGirl2Outline,WhiteGirl2Gray,nov4S2Circle,fiffen_Ingroup,left,0,,black-background,Teaching
 3,23,K_it.that_coodle,BlackGirl2Gray,WhiteGirl2Outline,nov4S2Circle,coodle_Outgroup,right,2,,black-background,Teaching
@@ -29,7 +29,7 @@
 3,27,K_it.that_coodle,BlackGirl2Gray,WhiteGirl2Outline,nov4S2Circle,coodle_Outgroup,right,2,,black-background,Teaching
 3,28,K_see.it_bem,BlackGirl2Gray,WhiteGirl2Outline,nov1S2Circle,bem_Outgroup,right,2,,black-background,Teaching
 3,29,E_that.see_glark,BlackGirl2Outline,WhiteGirl2Gray,nov1S2Circle,glark_Ingroup,left,0,,black-background,Teaching
-3,30,E_it.see_krat,BlackGirl2Outline,WhiteGirl2Gray,nov3S2Circle,krat_Ingroup,left,0,,black-background,Teaching
+3,30,E_it.that_krat,BlackGirl2Outline,WhiteGirl2Gray,nov3S2Circle,krat_Ingroup,left,0,,black-background,Teaching
 3,31,K_see.it_juff,BlackGirl2Gray,WhiteGirl2Outline,nov3S2Circle,juff_Outgroup,right,2,,black-background,Teaching
 4,32,where_krat500,nov1S2Square,nov3S2Square,Black,krat_Ingroup,right,2,,black-background,ImmTest
 4,33,find_tanzer500,nov2S2Square,nov4S2Square,Black,tanzer_Ingroup,left,0,,black-background,ImmTest
